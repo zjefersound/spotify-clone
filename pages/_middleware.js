@@ -17,4 +17,15 @@ export async function middleware(req) {
   if (!token && !unprotectedRoutes.includes(pathname)) {
     return NextResponse.redirect('/login');
   }
+
+  /**
+   * Note:
+   * 
+   * We might have 3 types of routes:
+   * - private: Can only be accessed if logged in 
+   * - only-public: Cannot be accessed if logged in
+   * - public: Can be accessed from any user
+   * 
+   * They should be save in a proper variable and be treated separatedly 
+   */
 }
