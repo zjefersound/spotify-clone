@@ -7,12 +7,9 @@ import {
   HeartIcon,
   LogoutIcon
 } from '@heroicons/react/outline';
-import { signOut, useSession } from 'next-auth/react';
+import { signOut } from 'next-auth/react';
 
 export default function Sidebar() {
-  const { data: session, status } = useSession(); 
-
-  console.log('session',session);
   const menuSections = [
     {
       items: [
@@ -35,7 +32,10 @@ export default function Sidebar() {
     }
   ]
   return (
-    <div className='text-gray-500 p-5 text-sm border-r border-gray-900'>
+    <div
+      className='text-gray-500 p-5 text-sm border-r border-gray-800
+        h-screen overflow-y-scroll scrollbar-hide'
+    >
       <div className='space-y-4'>
         {menuSections.map(section => (
           <>
