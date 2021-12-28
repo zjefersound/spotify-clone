@@ -4,11 +4,21 @@ import {
   LibraryIcon,
   PlusCircleIcon,
   RssIcon,
-  HeartIcon
+  HeartIcon,
+  LogoutIcon
 } from '@heroicons/react/outline';
+import { signOut, useSession } from 'next-auth/react';
 
 export default function Sidebar() {
+  const { data: session, status } = useSession(); 
+
+  console.log('session',session);
   const menuSections = [
+    {
+      items: [
+        { Icon: LogoutIcon, label: "Log out", onClick: () => signOut() },
+      ]
+    },
     {
       items: [
         { Icon: HomeIcon, label: "Home", onClick: () => { } },
