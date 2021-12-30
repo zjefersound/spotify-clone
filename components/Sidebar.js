@@ -4,10 +4,9 @@ import {
   LibraryIcon,
   PlusCircleIcon,
   RssIcon,
-  HeartIcon,
-  LogoutIcon
+  HeartIcon
 } from '@heroicons/react/outline';
-import { signOut, useSession } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 import { useRecoilState } from 'recoil';
 import { playlistIdState } from '../atoms/playlistAtom';
@@ -26,11 +25,6 @@ export default function Sidebar() {
   }, [session, spotifyApi]);
 
   const menuSections = [
-    {
-      items: [
-        { Icon: LogoutIcon, label: "Log out", onClick: () => signOut() },
-      ]
-    },
     {
       items: [
         { Icon: HomeIcon, label: "Home", onClick: () => { } },
