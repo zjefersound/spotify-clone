@@ -47,7 +47,7 @@ export default function Sidebar() {
         text-gray-500 p-5 
         w-64 shrink-0 
         sm:w-[12rem] lg:w-[16rem]
-        text-xs lg:text-sm border-r border-gray-800
+        text-xs lg:text-sm border-r border-gray-900
         h-screen overflow-y-scroll scrollbar-hide
         pb-36
       '
