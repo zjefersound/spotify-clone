@@ -49,6 +49,7 @@ export default function Sidebar() {
         sm:w-[12rem] lg:w-[16rem]
         text-xs lg:text-sm border-r border-gray-800
         h-screen overflow-y-scroll scrollbar-hide
+        pb-36
       '
     >
       <div className='space-y-4'>
