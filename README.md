@@ -15,4 +15,4 @@ This project consists in a web application that uses the Spotify API to control 
 
 - Create an test API on [Spotify Developers](https://developer.spotify.com/) and log into the [dashboard page](https://developer.spotify.com/dashboard/login)
 - Use the ``` env-example ``` to set the .env files. The get the needed information on the api dashboard
-- Run ``` yarn ``` to install the dependencies adn ``` yarn dev ``` to run locally
+- Run ``` yarn ``` to install the dependencies and ``` yarn dev ``` to run locally
