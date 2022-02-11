@@ -1,4 +1,4 @@
-import { ReplyIcon, SwitchHorizontalIcon, VolumeUpIcon } from "@heroicons/react/outline";
+import { RefreshIcon, SwitchHorizontalIcon, VolumeUpIcon } from "@heroicons/react/outline";
 import { FastForwardIcon, PauseIcon, PlayIcon, RewindIcon, VolumeUpIcon as VolumeDownIcon } from "@heroicons/react/solid";
 import { debounce } from "lodash";
 import { useSession } from "next-auth/react";
@@ -34,6 +34,7 @@ function Player() {
   const fetchCurrentSong = () => {
     if (!songInfo) {
       spotifiApi.getMyCurrentPlayingTrack().then(data => {
+        console.log(`data.body`, data.body);
         setElapsedTime(data.body?.progress_ms + 2000 || 0)
         setCurrentTrackId(data.body?.item?.id);
         spotifiApi.getMyCurrentPlaybackState().then(data => {
@@ -122,7 +123,7 @@ function Player() {
             onClick={() => spotifiApi.skipToNext()}
             className="button text-gray-400"
           />
-          <ReplyIcon className="button text-gray-400" />
+          <RefreshIcon className="button text-gray-400" />
         </div>
         <div className="flex mt-2 items-center space-x-2">
           <span className="text-xs text-gray-500">{millisToMinutesAndSeconds(elapsedTime)}</span>

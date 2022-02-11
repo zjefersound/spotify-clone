@@ -56,7 +56,7 @@ export default function Sidebar() {
         {menuSections.map(section => (
           <>
             {section.items.map(item => (
-              <button key={item.label} onClick={item.onClick} className='flex items-center space-x-2 hover:text-white'>
+              <button key={item.label} onClick={item.onClick} className='flex text-gray-400 font-bold items-center space-x-2 hover:text-white'>
                 <item.Icon className="w-5 h-5" />
                 <p>{item.label}</p>
               </button>
